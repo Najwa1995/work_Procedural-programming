@@ -1,0 +1,61 @@
+procedure Dot_product(v1:ARRAY_OF INTEGER[2]; v2:ARRAY_OF INTEGER[2];n:integer;)
+var 
+i,a,b,ps: integer;
+begin
+ps:=0;
+ps:=ps + v1[a]*v2[a]+ v1[b]*v2[b];
+write(ps);
+
+end
+
+// function
+
+function Dot_product(v1:ARRAY_OF INTEGER[2]; v2:ARRAY_OF INTEGER[2];n:integer;):integer
+
+var 
+i,a,b,ps: integer;
+begin
+ps:=0;
+ps:=ps + v1[a]*v2[a]+ v1[b]*v2[b];
+
+return ps;
+
+end
+
+//Write an algorithm which determines, for n pairs of given vectors, whether two vectors of given IR are orthogonal, by calling the procedure defined in the previous question. The dot product of two orthogonal vectors is zero.
+
+FUNCTION orthogonal(v1:ARRAY_OF INTEGER[n];v2:ARRAY_OF INTEGER[n];ps,n:integer;) : STRING
+var 
+ps:=0;
+begin
+ for i from 0 to n.length-1 STEP 1 do
+ dot_product(v1,v2,ps)
+  if (ps=0) then
+    return "the two vectors are orthogonal";
+  ELSE
+   return "the two vectors are not orthogonal" ;
+  END_if
+ END_for
+END
+
+
+//
+
+
+ALGORITHM dot_product1(n:integer;)
+VAR
+    V1 : ARRAY_OF integer[n];
+    V2 : ARRAY_OF integer[n];
+    i : INTEGER;  
+BEGIN
+    write("enter the size of the vectors: ");
+    read(n);
+
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        FOR j FROM 0 TO n-1 STEP 1  DO
+            read(V1[i]);
+            read(V2[j]);
+        END_FOR
+    END_FOR
+    dot_prudect(V1,V2,n);
+END
